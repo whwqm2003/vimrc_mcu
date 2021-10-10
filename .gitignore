@@ -1,3 +1,5 @@
+# vim swpFile
+*.swp
 # Prerequisites
 *.d
 

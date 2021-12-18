@@ -20,6 +20,8 @@ nodejs >= 10.12
 4.  plugManager目录下的plug.vim复制到你的对应目录，文件已做修改，更改了插件下载源，速度还是很快的
 5.  使用自动拷贝脚本时先编辑修改到自己的路径
 6.  打开gvim，安装coc LSP服务器
+7.  program文件夹下是备用程序
+	- ctags可以在coc效果不好时使用
 ```
 :CocInstall coc-clangd
 ```

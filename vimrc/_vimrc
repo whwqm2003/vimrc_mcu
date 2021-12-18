@@ -103,7 +103,8 @@ call plug#end()
 
 
 "spector 快捷键
-let g:vimspector_enable_mappings = 'HUMAN'
+"let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 "---------------------------------------------------------------------------------------------------
 "快速注释默认配置

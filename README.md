@@ -19,3 +19,15 @@ nodejs >= 10.12
 3.  color目录下的配色文件复制到你的对应目录
 4.  plugManager目录下的plug.vim复制到你的对应目录，文件已做修改，更改了插件下载源，速度还是很快的
 5.  使用自动拷贝脚本时先编辑修改到自己的路径
+6.  打开gvim，安装coc LSP服务器
+```
+:CocInstall coc-clangd
+```
+
+#### 其他建议安装
+- `compile_commands.json`生成工具compiledb：
+```
+pip install compiledb 
+```
+- Cygwin64 安装gcc、g++、make等工具
+- arm-none-eabi-gcc交叉编译器

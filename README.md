@@ -26,6 +26,13 @@ nodejs >= 10.12
 7.  program文件夹下是备用程序
 	- ctags可以在coc效果不好时使用
 
+#### 一些自定义按键说明
+	详细映射查看配置文件
+- leader w/e：窗口调整
+- leader s/d: 窗口跳转
+- leader kb：使用keil编译
+- leader kd: 使用keil下载
+- Ctrl+P：markdown预览(写markdown的时候调用其他插件预览会自动退出)
 #### 其他建议安装
 - `compile_commands.json`生成工具compiledb：
 ```

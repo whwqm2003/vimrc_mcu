@@ -99,8 +99,13 @@ Plug 'preservim/nerdcommenter'
 Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 "终端
 Plug 'skywind3000/vim-terminal-help'
+"markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
 call plug#end()
 
+"markdown preview
+nmap <C-p> :MarkdownPreview<CR>
 
 "spector 快捷键
 "let g:vimspector_enable_mappings = 'HUMAN'
@@ -399,10 +404,11 @@ nnoremap <leader>j <C-W>x<CR>
 nnoremap <leader>w :vertical resize -10<CR>
 nnoremap <leader>e :vertical resize +10<CR>
 
-
 "保存工作区
 " manually save a session with <F5>
 "noremap <F5> :mksession! $VIM/manual_session.vim<cr>
 " recall the manually saved session with <F6>
 "noremap <F6> :source $VIM/manual_session.vim<cr>
+
+
 

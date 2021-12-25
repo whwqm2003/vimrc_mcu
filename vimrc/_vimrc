@@ -79,7 +79,8 @@ set scrolloff=5
 "***********************************************************************************
 call plug#begin('D:\Program Files\Vim\vim82\autoload')
 "文件浏览器
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'preservim/nerdtree'
 "tags生成和边栏
 Plug 'preservim/tagbar', { 'on':  'TagbarToggle' }
 "底栏
@@ -100,12 +101,25 @@ Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 "终端
 Plug 'skywind3000/vim-terminal-help'
 "markdown
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
+"Plug 'iamcco/markdown-preview.vim'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 call plug#end()
 
 "markdown preview
-nmap <C-p> :MarkdownPreview<CR>
+"Uncomment to override defaults:
+filetype plugin on 
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 1
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_mermaid = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+let g:instant_markdown_autoscroll = 1
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
+nmap <C-p> :InstantMarkdownPreview<CR>
 
 "spector 快捷键
 "let g:vimspector_enable_mappings = 'HUMAN'
@@ -338,13 +352,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "***********************************************************************************
 "生成tags
 "map <F2> :!ctags -R * <CR>
-nnoremap <leader><F2> :!ctags -R * <CR>
+"nnoremap <leader><F2> :!ctags -R * <CR>
 "打开/关闭文件树
-"map <F3> :NERDTreeToggle<CR>
-nnoremap <leader><F3> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
+"nnoremap <leader><F3> :NERDTreeToggle<CR>
 "打开/关闭tagbar
 "map <F4> :TagbarToggle<CR>
-nnoremap <leader><F4> :TagbarToggle<CR>
+"nnoremap <leader><F4> :TagbarToggle<CR>
 
 
 "***********************************************************************************

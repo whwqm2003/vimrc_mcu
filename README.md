@@ -23,7 +23,8 @@ nodejs >= 10.12
 ```
 :CocInstall coc-clangd
 ```
-7.  program文件夹下是备用程序
+7.  下载`clangd`, bin目录配置环境变量
+8.  program文件夹下是备用程序
 	- ctags可以在coc效果不好时使用
 
 #### 一些自定义按键说明

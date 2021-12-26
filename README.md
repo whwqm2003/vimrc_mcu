@@ -36,6 +36,15 @@ npm -g install instant-markdown-d
 #### 其他 
 - program文件夹下是备用程序
 	- ctags可以在coc效果不好时使用
+- WSL下安装nodejs
+```
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+- vimspector插件安装--enable-c时提示权限问题：
+```
+sudo chown -R  username:username  filename
+```
 
 #### 一些自定义按键说明
 	详细映射查看配置文件

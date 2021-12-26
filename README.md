@@ -38,8 +38,9 @@ npm -g install instant-markdown-d
 	- ctags可以在coc效果不好时使用
 - WSL下安装nodejs
 ```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
+//安装失败可以试试下面这个再安装
+//curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 ```
 - vimspector插件安装--enable-c时提示权限问题：
 ```

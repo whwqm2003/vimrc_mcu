@@ -19,7 +19,6 @@ if(g:iswin==1)
 	cd D:\WorkSpace
 endif
 
-"cd D:\WorkSpace
 "set pythonthreedll=python39.dll
 "最大化打开
 autocmd GUIEnter * simalt ~x
@@ -96,7 +95,9 @@ set scrolloff=5
 "***********************************************************************************
 "*******************************插件配置区******************************************
 "***********************************************************************************
-call plug#begin('D:\Program Files\Vim\vim82\autoload')
+"call plug#begin('D:\Program Files\Vim\vim82\autoload')
+"call plug#begin(myplugdir)
+call plug#begin('/home/wang/myvimplug')
 "文件浏览器
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdtree'
@@ -281,7 +282,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -381,6 +382,7 @@ map <F3> :NERDTreeToggle<CR>
 
 
 "***********************************************************************************
+"
 "******************************自定义功能区*****************************************
 "***********************************************************************************
 "-----------------------------keil------------------------------

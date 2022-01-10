@@ -103,6 +103,10 @@ Plug 'skywind3000/vim-terminal-help'
 "markdown
 "Plug 'iamcco/markdown-preview.vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+"翻译
+Plug 'voldikss/vim-translator'
+"中文帮助文档
+Plug 'yianwillis/vimcdoc'
 call plug#end()
 
 "markdown preview

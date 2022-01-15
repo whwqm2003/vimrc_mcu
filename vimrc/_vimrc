@@ -1,4 +1,4 @@
-set pythonthreedll=python39.dll
+"set pythonthreedll=python39.dll
 
 let g:iswin=0
 let g:islinux=0
@@ -39,7 +39,7 @@ set backspace=indent,eol,start
 colorscheme onedark
 
 "设置字体，该字体需要下载安装
-set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI 	
+set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 
 "自动重载配置文件，只对一部分配置有效，插件配置需要重新启动
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -121,8 +121,15 @@ Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 Plug 'skywind3000/vim-terminal-help'
 "markdown
 "Plug 'iamcco/markdown-preview.vim'
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'instant-markdown/vim-instant-markdown'
+"翻译
+Plug 'voldikss/vim-translator' 
+"中文帮助文档
+Plug 'yianwillis/vimcdoc'
 call plug#end()
+
+"let g:translator_default_engines = 'bing'
 
 "markdown preview
 "Uncomment to override defaults:

@@ -6,4 +6,3 @@ echo "$source"
 echo "$target"
 cp "$source" "$target"
 
-read

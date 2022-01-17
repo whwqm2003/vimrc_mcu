@@ -46,6 +46,10 @@ sudo apt install -y nodejs
 ```
 sudo chown -R  username:username  filename
 ```
+- makefile中添加win平台库路径示例：
+```c
+-I D:/GreenSoft/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/arm-none-eabi/include
+```
 
 #### 一些自定义按键说明
 	详细映射查看配置文件
@@ -54,7 +58,7 @@ sudo chown -R  username:username  filename
 - leader kb：使用keil编译
 - leader kd: 使用keil下载
 - Ctrl+P：markdown预览
-#### 其他建议安装
+#### 其他安装
 - `compile_commands.json`生成工具compiledb：
 ```
 pip install compiledb 

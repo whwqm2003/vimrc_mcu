@@ -16,7 +16,15 @@ if(has("gui_running"))
 endif
 
 if(g:iswin==1) 
-	cd D:\WorkSpace
+	if(isdirectory("C:\WorkSpace"))
+		cd C:\WorkSpace
+	elseif(isdirectory("D:\WorkSpace"))
+		cd D:\WorkSpace
+	elseif(isdirectory("E:\WorkSpace"))
+		cd E:\WorkSpace
+	elseif(isdirectory("F:\WorkSpace"))
+		cd F:\WorkSpace
+	endif
 endif
 
 "cd D:\WorkSpace
@@ -33,7 +41,7 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312
 
 "设置退格键功能
-set backspace=indent,eol,start
+set backspace=2 "indent,eol,start
 
 "设置颜色主题,该主题不在默认安装，需要下载
 colorscheme onedark
@@ -42,7 +50,7 @@ colorscheme onedark
 set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 
 "自动重载配置文件，只对一部分配置有效，插件配置需要重新启动
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 "语法高亮，需要重启
 syntax on
@@ -58,7 +66,9 @@ set tabstop=4
 "设置自动缩进长度为4
 set shiftwidth=4
 "按c语言格式缩进
-set cindent
+"set cindent
+"根据文件类型自动缩进
+filetype plugin indent on
 "继承前一行的缩进方式
 set autoindent
 "解决粘贴缩进异常
@@ -93,13 +103,15 @@ set cursorcolumn
 "光标距离顶行底行5滚动
 set scrolloff=5
 
+"不使用交换文件，用于异常退出文件恢复
+set noswapfile
+
 "***********************************************************************************
 "*******************************插件配置区******************************************
 "***********************************************************************************
 call plug#begin('D:\Program Files\Vim\vim82\autoload')
 "文件浏览器
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'preservim/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "tags生成和边栏
 Plug 'preservim/tagbar', { 'on':  'TagbarToggle' }
 "底栏
@@ -124,7 +136,7 @@ Plug 'skywind3000/vim-terminal-help'
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'instant-markdown/vim-instant-markdown'
 "翻译
-Plug 'voldikss/vim-translator' 
+Plug 'voldikss/vim-translator'
 "中文帮助文档
 Plug 'yianwillis/vimcdoc'
 call plug#end()
@@ -147,9 +159,10 @@ let g:instant_markdown_autoscroll = 1
 "let g:instant_markdown_python = 1
 nmap <C-p> :InstantMarkdownPreview<CR>
 
+
 "spector 快捷键
-"let g:vimspector_enable_mappings = 'HUMAN'
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+"let g:vimspector_enable_mappings = 'HUMAN'
 
 "---------------------------------------------------------------------------------------------------
 "快速注释默认配置
@@ -383,7 +396,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 map <F3> :NERDTreeToggle<CR>
 "nnoremap <leader><F3> :NERDTreeToggle<CR>
 "打开/关闭tagbar
-"map <F4> :TagbarToggle<CR>
+map <F4> :TagbarToggle<CR>
 "nnoremap <leader><F4> :TagbarToggle<CR>
 
 
@@ -444,11 +457,10 @@ nnoremap <leader>j <C-W>x<CR>
 nnoremap <leader>w :vertical resize -10<CR>
 nnoremap <leader>e :vertical resize +10<CR>
 
+
 "保存工作区
 " manually save a session with <F5>
 "noremap <F5> :mksession! $VIM/manual_session.vim<cr>
 " recall the manually saved session with <F6>
 "noremap <F6> :source $VIM/manual_session.vim<cr>
-
-
 

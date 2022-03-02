@@ -1,39 +1,58 @@
-# vimrc
+# vimrc使用说明
 
-#### 介绍
-个人vimrc配置，主要用来C语言的单片机开发
+## 介绍
+- 个人vimrc配置，主要用来C语言的单片机开发
+- 适用于：
+	- c/c++
+	- markdown
+	- python 
 
-#### vim版本
-gvim8.2 x64
-其他未测试
+- vim版本
+gvim8.2 x64, 其他未测试
 
-#### 依赖
+## 依赖
 
 - python3.9
 - nodejs >= 10.12
 - clangd
 
-#### 使用说明
-1.  _vimrc里面有个工作目录切换，需要设置一下
+## 使用说明
+1.  配置可以打开默认工作目录，按需修改
 2.  font目录下的字体安装一下
 3.  color目录下的配色文件复制到你的对应目录
-4.  plugManager目录下的plug.vim复制到你的对应目录，文件已做修改，更改了插件下载源，速度还是很快的
-5.  使用自动拷贝脚本时先编辑修改到自己的路径
-6.  安装coc LSP服务器
+4.  plugManager目录下的plug.vim复制到你的对应目录，文件已做修改，更改了插件下载源，速度还是很快的。（安装失败的话多尝试几次看看）
+5.  vim命令：安装coc LSP服务器
 ```
 :CocInstall coc-clangd
+:CocInstall coc-pyright
 ```
-7.  下载`clangd`, 添加bin目录到系统环境变量
-8.  安装vimspector的c调试器(这个需要从github拉取，没有科学上网大概率会失败，可以找不同时间段尝试或者连接手机热点尝试)
+6.  下载[clangd](https://clangd.llvm.org/)， 添加bin目录到系统环境变量
+7.  vim命令：安装vimspector的c调试器(这个需要从github拉取，没有科学上网大概率会失败，可以找不同时间段尝试或者连接手机热点尝试)
 ```
 :VimspectorInstall --enable-c 
 ```
-9. 安装markdown预览组件
+8. powershell命令：安装markdown预览组件
 ```
 npm -g install instant-markdown-d
 ```
+9. 下载`compile_commands.json`生成工具compiledb，powershell命令：
+```shell
+pip install compiledb 
+```
+10. 下载[Cygwin64](https://cygwin.com/index.html), 安装gcc、g++、make等工具，安装完成后把bin目录添加到环境变量
 
-#### 其他 
+11. 下载[arm-none-eabi-gcc](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)交叉编译器，安装完成后把bin目录添加到环境变量
+
+## 一些自定义按键说明
+	详细映射查看配置文件
+- leader w/e：窗口调整
+- leader s/d: 窗口跳转
+- leader kb：使用keil编译
+- leader kd: 使用keil下载
+- Ctrl+P：markdown预览
+
+## 其他安装
+
 - program文件夹下是备用程序
 	- ctags可以在coc效果不好时使用
 - WSL下安装nodejs
@@ -50,20 +69,4 @@ sudo chown -R  username:username  filename
 ```c
 -I D:/GreenSoft/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/arm-none-eabi/include
 ```
-
-#### 一些自定义按键说明
-	详细映射查看配置文件
-- leader w/e：窗口调整
-- leader s/d: 窗口跳转
-- leader kb：使用keil编译
-- leader kd: 使用keil下载
-- Ctrl+P：markdown预览
-#### 其他安装
-- `compile_commands.json`生成工具compiledb：
-```
-pip install compiledb 
-```
-- Cygwin64 安装gcc、g++、make等工具
-- arm-none-eabi-gcc交叉编译器
-
 

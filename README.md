@@ -56,6 +56,12 @@ pip install compiledb
 - leader kd: 使用keil下载
 - Ctrl+P：markdown预览
 
+## keil编码配置
+- 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
+```
+-Wno-invalid-source-encoding
+```
+
 ## 其他备忘
 
 - WSL下安装nodejs

@@ -109,7 +109,7 @@ set noswapfile
 "***********************************************************************************
 "*******************************插件配置区******************************************
 "***********************************************************************************
-call plug#begin('D:\Program Files\Vim\vim82\autoload')
+call plug#begin('D:\Program Files\Vim\vim82\autoload\autoload_plug')
 "文件浏览器
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "tags生成和边栏
@@ -421,6 +421,8 @@ function MakeKeilTarget(options)
         let l:target =  glob('../MDK-ARM/*.uvprojx')
     elseif !empty(glob('../../MDK-ARM/*.uvprojx'))	"stm32-Cube
         let l:target =  glob('../../MDK-ARM/*.uvprojx')
+    elseif !empty(glob('./MDK-ARM/*.uvprojx'))	"stm32-Cube
+        let l:target =  glob('./MDK-ARM/*.uvprojx')
     endif
     "-------------------------8051-------------------------
     if !empty(glob('*.uvproj'))

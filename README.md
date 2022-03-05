@@ -46,6 +46,8 @@ pip install compiledb
 
 12. 解压ctags文件夹下的`ctags58.zip`，拷贝ctags.exe到vim可执行文件目录下
 
+13. 把keil可执行文件目录添加到环境变量，用于调用keil编译和下载
+
 ## 一些自定义按键说明
 	详细映射查看配置文件
 - leader w/e：窗口调整

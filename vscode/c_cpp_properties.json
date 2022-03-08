@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "stc51",
+            "includePath": [
+                "${workspaceFolder}/STCLIB",
+                "${workspaceFolder}/src",
+                "D:/Keil_v5/C51/INC",
+                "D:/Keil_v5/C51/INC/STC",
+                "${workspaceFolder}/inc",
+                "${workspaceFolder}/MYLIB"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "bit=char",
+                "sbit=char",
+                "sfr=char",
+                "code=const",
+                "xdata=_Alignas"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

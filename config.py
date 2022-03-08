@@ -8,11 +8,16 @@ default_vimrc="D:/Program Files/Vim/_vimrc"
 default_colorsDir="D:/Program Files/Vim/vim82/colors"
 default_plugManagerDir="D:/Program Files/Vim/vim82/autoload"
 #本地上传仓库文件位置
-default_vimrcGitee="D:/WorkSpace/Gitee/vimrc/vimrc/_vimrc"
-default_colors1="D:/WorkSpace/Gitee/vimrc/colors/molokai.vim"
-default_colors2="D:/WorkSpace/Gitee/vimrc/colors/onedark.vim"
-default_colors3="D:/WorkSpace/Gitee/vimrc/colors/seoul256.vim"
-default_plugManagerGitee="D:/WorkSpace/Gitee/vimrc/plugManager/plug.vim"
+# default_vimrcGitee="D:/WorkSpace/Gitee/vimrc/vimrc/_vimrc"
+# default_colors1="D:/WorkSpace/Gitee/vimrc/colors/molokai.vim"
+# default_colors2="D:/WorkSpace/Gitee/vimrc/colors/onedark.vim"
+# default_colors3="D:/WorkSpace/Gitee/vimrc/colors/seoul256.vim"
+# default_plugManagerGitee="D:/WorkSpace/Gitee/vimrc/plugManager/plug.vim"
+default_vimrcGitee="./vimrc/_vimrc"
+default_colors1="./colors/molokai.vim"
+default_colors2="./colors/onedark.vim"
+default_colors3="./colors/seoul256.vim"
+default_plugManagerGitee="./plugManager/plug.vim"
 
 
 def loop_main(key):

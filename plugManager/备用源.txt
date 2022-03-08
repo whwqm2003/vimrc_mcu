@@ -1,0 +1,8 @@
+https://github.91chi.fun
+https://hub.fastgit.xyz
+
+使用方法：
+1.替换第772行对应网址：
+let fmt = get(g:, 'plug_url_format', 'https://git::@hub.fastgit.xyz/%s.git')
+2.替换第1168行对应网址：
+     \ '^https://git::@hub.fastgit\.xyz', 'https://hub.fastgit.xyz', '')

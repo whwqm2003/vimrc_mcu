@@ -15,6 +15,7 @@ gvim8.2 x64, 其他未测试
 - python3.9
 - nodejs >= 10.12
 - clangd
+- ctags
 
 ## 使用说明
 1.  配置可以打开默认工作目录，按需修改
@@ -43,6 +44,10 @@ pip install compiledb
 
 11. 下载[arm-none-eabi-gcc](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)交叉编译器，安装完成后把bin目录添加到环境变量
 
+12. 解压ctags文件夹下的`ctags58.zip`，拷贝ctags.exe到vim可执行文件目录下
+
+13. 把keil可执行文件目录添加到环境变量，用于调用keil编译和下载
+
 ## 一些自定义按键说明
 	详细映射查看配置文件
 - leader w/e：窗口调整
@@ -51,10 +56,14 @@ pip install compiledb
 - leader kd: 使用keil下载
 - Ctrl+P：markdown预览
 
-## 其他安装
+## keil编码配置
+- 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
+```
+-Wno-invalid-source-encoding
+```
 
-- program文件夹下是备用程序
-	- ctags可以在coc效果不好时使用
+## 其他备忘
+
 - WSL下安装nodejs
 ```
 sudo apt install -y nodejs

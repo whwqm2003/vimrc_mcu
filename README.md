@@ -28,7 +28,7 @@ gvim8.2 x64, 其他未测试
 :CocInstall coc-pyright
 ```
 6.  下载[clangd](https://clangd.llvm.org/)， 添加bin目录到系统环境变量
-7.  vim命令：安装vimspector的c调试器(这个需要从github拉取，没有科学上网大概率会失败，可以找不同时间段尝试或者连接手机热点尝试)
+7.  vim命令：安装vimspector的c调试器(这个需要从github拉取，没有科学上网大概率会失败，可以找不同时间段尝试或者连接手机热点尝试,或者手动下载文件后放到下载目录再执行此命令)
 ```
 :VimspectorInstall --enable-c 
 ```
@@ -62,8 +62,8 @@ pip install compiledb
 -Wno-invalid-source-encoding
 ```
 
-## 其他备忘
-
+## 其他
+- vscode文件夹下面有一个vscode 51的配置，需要安装c/c++插件并配置keil目录。因为sdcc和keil格式不兼容，暂时不使用gvim开发51
 - WSL下安装nodejs
 ```
 sudo apt install -y nodejs

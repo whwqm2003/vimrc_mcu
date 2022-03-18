@@ -1,4 +1,4 @@
-"set pythonthreedll=python39.dll
+set pythonthreedll=python39.dll
 
 " Vim's default behavior
 if &compatible
@@ -160,6 +160,9 @@ Plug 'preservim/tagbar', { 'on':  'TagbarToggle' }
 "底栏
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"buffer管理
+Plug 'jlanzarotta/bufexplorer'
+Plug 'ap/vim-buftabline'
 "括号自动关闭
 Plug 'Townk/vim-autoclose'
 "自动函数注释
@@ -183,6 +186,9 @@ Plug 'voldikss/vim-translator'
 "中文帮助文档
 Plug 'yianwillis/vimcdoc'
 call plug#end()
+
+let g:buftabline_numbers = 1
+let g:buftabline_indicators = 1
 
 "let g:translator_default_engines = 'bing'
 

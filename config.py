@@ -7,6 +7,7 @@ import os
 default_vimrc="D:/Program Files/Vim/_vimrc"
 default_colorsDir="D:/Program Files/Vim/vim82/colors"
 default_plugManagerDir="D:/Program Files/Vim/vim82/autoload"
+default_ctagsTo="D:/Program Files/Vim/vim82"
 #本地上传仓库文件位置
 # default_vimrcGitee="D:/WorkSpace/Gitee/vimrc/vimrc/_vimrc"
 # default_colors1="D:/WorkSpace/Gitee/vimrc/colors/molokai.vim"
@@ -18,6 +19,7 @@ default_colors1="./colors/molokai.vim"
 default_colors2="./colors/onedark.vim"
 default_colors3="./colors/seoul256.vim"
 default_plugManagerGitee="./plugManager/plug.vim"
+default_ctags="./ctags/ctags58/ctags.exe"
 
 
 def loop_main(key):
@@ -41,6 +43,9 @@ def loop_main(key):
 
         shutil.copy(default_plugManagerGitee,default_plugManagerDir)
         print("拷贝插件管理器(已修改下载源): ",default_plugManagerGitee,"==>",default_plugManagerDir,"...")
+
+        shutil.copy(default_ctags,default_ctagsTo)
+        print("拷贝ctags",default_ctags,"==>",default_ctagsTo,"...")
 
     elif(key1 == "2"):
         fpath1,fname1 = os.path.split(default_vimrcGitee)

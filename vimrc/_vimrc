@@ -1,5 +1,10 @@
 set pythonthreedll=python39.dll
 
+set guioptions-=m
+set guioptions-=r
+set guioptions-=T
+
+
 " Vim's default behavior
 if &compatible
   set nocompatible
@@ -514,4 +519,10 @@ nnoremap <leader>e :vertical resize +10<CR>
 "noremap <F5> :mksession! $VIM/manual_session.vim<cr>
 " recall the manually saved session with <F6>
 "noremap <F6> :source $VIM/manual_session.vim<cr>
+
+hi BufTabLineCurrent guifg=bg guibg=LightGreen
+hi BufTabLineActive guifg=bg guibg=#E5C07B
+hi BufTabLineHidden guifg=bg guibg=#98C379
+
+
 

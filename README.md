@@ -50,13 +50,16 @@ pip install compiledb
 
 13. 把keil可执行文件目录添加到环境变量，用于调用keil编译和下载
 
-## 一些自定义按键说明
+## 一些自定义按键说明(<>内表示同时按，否则为顺序按)
 	详细映射查看配置文件
-- leader w/e：窗口调整
-- leader s/d: 窗口跳转
-- leader kb：使用keil编译
-- leader kd: 使用keil下载
-- Ctrl+P：markdown预览
+- `<F3>`: 文件树
+- `<F4>`: Tagbar
+- `<Alt-+>`: 终端
+- `<leader>be`: buffer列表
+- `<leader>w/e`：窗口调整
+- `<leader>s/d`: 窗口跳转
+- `<leader>kb`：使用keil编译
+- `<leader>kd`: 使用keil下载
 
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
@@ -80,4 +83,25 @@ sudo chown -R  username:username  filename
 ```c
 -I D:/GreenSoft/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/arm-none-eabi/include
 ```
+## 演示
+<img src="https://www.z4a.net/images/2022/03/19/Snipaste_2022-03-19_17-21-39.png" alt="Snipaste_2022-03-19_17-21-39.png" border="0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

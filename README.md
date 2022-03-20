@@ -50,6 +50,8 @@ pip install compiledb
 
 13. 把keil可执行文件目录添加到环境变量，用于调用keil编译和下载
 
+14. 把fullscreen目录下的dll文件拷贝到gvim.exe同级目录
+
 ## 一些自定义按键说明(<>内表示同时按，否则为顺序按)
 	详细映射查看配置文件
 - `<F3>`: 文件树

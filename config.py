@@ -8,18 +8,15 @@ default_vimrc="D:/Program Files/Vim/_vimrc"
 default_colorsDir="D:/Program Files/Vim/vim82/colors"
 default_plugManagerDir="D:/Program Files/Vim/vim82/autoload"
 default_ctagsTo="D:/Program Files/Vim/vim82"
+default_fullscreenTo=default_ctagsTo
 #本地上传仓库文件位置
-# default_vimrcGitee="D:/WorkSpace/Gitee/vimrc/vimrc/_vimrc"
-# default_colors1="D:/WorkSpace/Gitee/vimrc/colors/molokai.vim"
-# default_colors2="D:/WorkSpace/Gitee/vimrc/colors/onedark.vim"
-# default_colors3="D:/WorkSpace/Gitee/vimrc/colors/seoul256.vim"
-# default_plugManagerGitee="D:/WorkSpace/Gitee/vimrc/plugManager/plug.vim"
 default_vimrcGitee="./vimrc/_vimrc"
 default_colors1="./colors/molokai.vim"
 default_colors2="./colors/onedark.vim"
 default_colors3="./colors/seoul256.vim"
 default_plugManagerGitee="./plugManager/plug.vim"
 default_ctags="./ctags/ctags58/ctags.exe"
+default_fullscreen="./fullscreen/gvimfullscreen.dll"
 
 
 def loop_main(key):
@@ -46,6 +43,9 @@ def loop_main(key):
 
         shutil.copy(default_ctags,default_ctagsTo)
         print("拷贝ctags",default_ctags,"==>",default_ctagsTo,"...")
+
+        shutil.copy(default_fullscreen,default_fullscreenTo)
+        print("拷贝全屏组件",default_fullscreen,"==>",default_fullscreenTo,"...")
 
     elif(key1 == "2"):
         fpath1,fname1 = os.path.split(default_vimrcGitee)

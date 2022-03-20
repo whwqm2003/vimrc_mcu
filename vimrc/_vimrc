@@ -556,9 +556,9 @@ if has('gui_running') && has('libcall')
 	endfunction
     
 	"Shift+Y
-	nmap <s-y> <Esc>:call SetAlpha(3)<CR>
+	nmap <A-y> <Esc>:call SetAlpha(3)<CR>
 	"Shift+T
-	nmap <s-t> <Esc>:call SetAlpha(-3)<CR>
+	nmap <A-t> <Esc>:call SetAlpha(-3)<CR>
 
 	let g:VimTopMost = 0
 	function! SwitchVimTopMostMode()
@@ -571,7 +571,7 @@ if has('gui_running') && has('libcall')
 	endfunction
     
 	"Shift+R
-	nmap <s-r> <Esc>:call SwitchVimTopMostMode()<CR>
+	nmap <A-r> <Esc>:call SwitchVimTopMostMode()<CR>
 endif
 
 

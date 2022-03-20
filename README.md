@@ -63,8 +63,8 @@ pip install compiledb
 - `<leader>kb`：使用keil编译
 - `<leader>kd`: 使用keil下载
 - `<Alt-Enter>`: 全屏
-- `<Shift-y`>:全屏减小透明度
-- `<Shift-t`>:全屏增加透明度
+- `<Alt-y`>:全屏减小透明度
+- `<Alt-t`>:全屏增加透明度
 
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：

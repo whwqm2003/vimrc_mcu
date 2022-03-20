@@ -1,7 +1,9 @@
 set pythonthreedll=python39.dll
 
+"关闭菜单，滚动条，工具栏
 set guioptions-=m
 set guioptions-=r
+set guioptions-=L
 set guioptions-=T
 
 
@@ -179,7 +181,7 @@ Plug 'luochen1990/rainbow'
 "快速注释
 Plug 'preservim/nerdcommenter'
 "调试
-Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
+"Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 "终端
 Plug 'skywind3000/vim-terminal-help'
 "markdown
@@ -523,6 +525,56 @@ nnoremap <leader>e :vertical resize +10<CR>
 hi BufTabLineCurrent guifg=bg guibg=LightGreen
 hi BufTabLineActive guifg=bg guibg=#E5C07B
 hi BufTabLineHidden guifg=bg guibg=#98C379
+
+" toggle fullscreen mode by pressing F11
+"noremap <leader>aa :call libcallnr('gvim_fullscreen.dll', 'ToggleFullscreen', 0)<cr>
+" toggle window transparency to 247 or 180 by pressing F12
+"noremap <leader>ii :call libcallnr('gvim_fullscreen.dll', 'ToggleTransparency', "247,180")<cr>
+" toggle fullscreen mode by pressing F11
+
+
+
+if has('gui_running') && has('libcall')
+	let g:MyVimLib = $VIMRUNTIME.'/gvimfullscreen.dll'
+	function ToggleFullScreen()
+		call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
+	endfunction
+    
+	"Alt+Enter
+	map <A-Enter> <Esc>:call ToggleFullScreen()<CR>
+
+	let g:VimAlpha = 240
+	function! SetAlpha(alpha)
+		let g:VimAlpha = g:VimAlpha + a:alpha
+		if g:VimAlpha < 180
+			let g:VimAlpha = 180
+		endif
+		if g:VimAlpha > 255
+			let g:VimAlpha = 255
+		endif
+		call libcall(g:MyVimLib, 'SetAlpha', g:VimAlpha)
+	endfunction
+    
+	"Shift+Y
+	nmap <s-y> <Esc>:call SetAlpha(3)<CR>
+	"Shift+T
+	nmap <s-t> <Esc>:call SetAlpha(-3)<CR>
+
+	let g:VimTopMost = 0
+	function! SwitchVimTopMostMode()
+		if g:VimTopMost == 0
+			let g:VimTopMost = 1
+		else
+			let g:VimTopMost = 0
+		endif
+		call libcall(g:MyVimLib, 'EnableTopMost', g:VimTopMost)
+	endfunction
+    
+	"Shift+R
+	nmap <s-r> <Esc>:call SwitchVimTopMostMode()<CR>
+endif
+
+
 
 
 

@@ -6,6 +6,7 @@
 	- c/c++
 	- markdown
 	- python 
+	- 二进制文件(.bin)
 
 - vim版本
 gvim8.2 x64, 其他未测试

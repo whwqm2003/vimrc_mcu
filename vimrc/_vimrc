@@ -77,8 +77,6 @@ if(g:iswin==1)
 	endif
 endif
 
-"cd D:\WorkSpace
-"set pythonthreedll=python39.dll
 "最大化打开
 autocmd GUIEnter * simalt ~x
 
@@ -192,6 +190,8 @@ Plug 'instant-markdown/vim-instant-markdown'
 Plug 'voldikss/vim-translator'
 "中文帮助文档
 Plug 'yianwillis/vimcdoc'
+"二进制编辑插件
+Plug 'Shougo/vinarise.vim'
 call plug#end()
 
 let g:buftabline_numbers = 1
@@ -514,6 +514,8 @@ nnoremap <leader>j <C-W>x<CR>
 "窗口大小调整
 nnoremap <leader>w :vertical resize -10<CR>
 nnoremap <leader>e :vertical resize +10<CR>
+"bin
+nnoremap <leader>hex :Vinarise<CR>
 
 
 "保存工作区

@@ -67,6 +67,8 @@ pip install compiledb
 - `<Alt-y`>:全屏减小透明度
 - `<Alt-t`>:全屏增加透明度
 - `<leader>hex`:打开二进制文件(不能用于关闭)
+- `<leader><leader>w`:按单词向后跳转
+- `<leader><leader>b`:按单词向前跳转
 
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：

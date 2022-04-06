@@ -157,9 +157,9 @@ set noswapfile
 "*******************************插件配置区******************************************
 "***********************************************************************************
 if(g:iswin==1) 
-	let g:myplugdir="$HOME/.vim/myplug"
-elseif(g:islinux==1)
 	let g:myplugdir="$VIM/myplug"
+elseif(g:islinux==1)
+	let g:myplugdir="$HOME/.vim/myplug"
 endif
 call plug#begin(g:myplugdir)
 "文件浏览器

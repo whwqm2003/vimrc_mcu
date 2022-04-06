@@ -53,7 +53,6 @@ endfunction
 let g:iswin=0
 let g:islinux=0
 let g:isgui=0
-let g:myplugdir="/usr/share/vim/vim81/myplug"
 
 if(has("win32")||has("win64"))
 	let g:iswin=1
@@ -157,7 +156,12 @@ set noswapfile
 "***********************************************************************************
 "*******************************插件配置区******************************************
 "***********************************************************************************
-call plug#begin('D:\Program Files\Vim\vim82\autoload\autoload_plug')
+if(g:iswin==1) 
+	let g:myplugdir="$HOME/.vim/myplug"
+elseif(g:islinux==1)
+	let g:myplugdir="$VIM/myplug"
+endif
+call plug#begin(g:myplugdir)
 "文件浏览器
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "tags生成和边栏

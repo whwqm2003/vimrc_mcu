@@ -19,7 +19,7 @@ default_ctags="./ctags/ctags58/ctags.exe"
 default_fullscreen="./fullscreen/gvimfullscreen.dll"
 
 
-def loop_main(key,platform):
+def loop_main(key1,platform):
     if(platform == "win32"):
         if not os.path.isfile(default_vimrc_win):
             print("vim安装路径错误")
@@ -79,9 +79,21 @@ def loop_main(key,platform):
             print("拷贝主题: ",default_colors2,"==>",linux_vim_install_dir+"/colors","...")
             print("拷贝主题: ",default_colors3,"==>",linux_vim_install_dir+"/colors","...")
     elif(key1 == "2"):
-        fpath1,fname1 = os.path.split(default_vimrcGitee)
-        shutil.copy(default_vimrc_win,fpath1)
-        print("拷贝_vimrc: ",default_vimrc_win,"==>",fpath1,"...")
+        if(platform == "win32"):
+            fpath1,fname1 = os.path.split(default_vimrcGitee)
+            shutil.copy(default_vimrc_win,fpath1)
+            print("拷贝_vimrc: ",default_vimrc_win,"==>",fpath1,"...")
+        if(platform == "linux"):
+            home_dir = os.environ['HOME']
+            if(os.path.isfile(home_dir+"/.vimrc")):
+                fpath1,fname1 = os.path.split(default_vimrcGitee)
+                shutil.copy(home_dir+"/.vimrc",fpath1)
+                os.remove(default_vimrcGitee)
+                os.rename(fpath1+"/.vimrc",fpath1+"/_vimrc")
+                print("拷贝.vimrc: ",home_dir,"/.vimrc","==>",fpath1,"...")
+            else:
+                print("~/.vimrc不存在!!")
+            
     # elif(key1 == "3"):
         # print("333")
     else:

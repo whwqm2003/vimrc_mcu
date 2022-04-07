@@ -6,6 +6,11 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=T
 
+inoremap <C-J> <ESC>ja
+inoremap <C-K> <ESC>ka
+inoremap <C-H> <ESC>ha
+inoremap <C-L> <ESC>la
+
 
 " Vim's default behavior
 if &compatible
@@ -171,7 +176,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "buffer管理
 Plug 'jlanzarotta/bufexplorer'
-Plug 'ap/vim-buftabline'
+"Plug 'ap/vim-buftabline'
 "括号自动关闭
 Plug 'Townk/vim-autoclose'
 "自动函数注释
@@ -200,8 +205,8 @@ Plug 'Shougo/vinarise.vim'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
-let g:buftabline_numbers = 1
-let g:buftabline_indicators = 1
+"let g:buftabline_numbers = 1
+"let g:buftabline_indicators = 1
 
 "let g:translator_default_engines = 'bing'
 
@@ -268,10 +273,22 @@ let g:DoxygenToolkit_licenseTag="My own license"
 
 "---------------------------------------------------------------------------------------------------
 "底行配置
-let g:airline#extensions#tabline#enable = 1
+let g:airline_theme="molokai"
+"let g:airline_powerline_fonts = 1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+nmap <tab> :bn<cr>
 
 "---------------------------------------------------------------------------------------------------
 "文件树配置
@@ -530,9 +547,9 @@ nnoremap <leader>hex :Vinarise<CR>
 " recall the manually saved session with <F6>
 "noremap <F6> :source $VIM/manual_session.vim<cr>
 
-hi BufTabLineCurrent guifg=bg guibg=LightGreen
-hi BufTabLineActive guifg=bg guibg=#E5C07B
-hi BufTabLineHidden guifg=bg guibg=#98C379
+"hi BufTabLineCurrent guifg=bg guibg=LightGreen
+"hi BufTabLineActive guifg=bg guibg=#E5C07B
+"hi BufTabLineHidden guifg=bg guibg=#98C379
 
 " toggle fullscreen mode by pressing F11
 "noremap <leader>aa :call libcallnr('gvim_fullscreen.dll', 'ToggleFullscreen', 0)<cr>

@@ -15,7 +15,7 @@ default_colors1="./colors/molokai.vim"
 default_colors2="./colors/onedark.vim"
 default_colors3="./colors/seoul256.vim"
 default_plugManagerGitee="./plugManager/plug.vim"
-default_ctags="./ctags/ctags58/ctags.exe"
+default_ctags="./ctags/ctags.exe"
 default_fullscreen="./fullscreen/gvimfullscreen.dll"
 
 

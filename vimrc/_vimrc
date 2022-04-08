@@ -469,7 +469,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "************************自定义快捷键配置不包含插件*********************************
 "***********************************************************************************
 "生成tags
-"map <F2> :!ctags -R * <CR>
+map <F2> :!ctags -R * <CR>
 "nnoremap <leader><F2> :!ctags -R * <CR>
 "打开/关闭文件树
 map <F3> :NERDTreeToggle<CR>

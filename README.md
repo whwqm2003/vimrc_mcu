@@ -101,7 +101,7 @@ pip install compiledb
 ```
 
 ## 其他
-- vscode文件夹下面有一个vscode 51的配置，需要安装c/c++插件并配置keil目录。因为sdcc和keil格式不兼容，暂时不使用gvim开发51
+- 51使用ctags生成tags文件辅助跳转，其他使用make的工具使用`make compiledb`更新数据库文件
 - vimspector插件安装--enable-c时提示权限问题：
 ```
 sudo chown -R  username:username  filename

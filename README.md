@@ -139,15 +139,14 @@ pip install compiledb
 
 	详细映射查看配置文件
 
+### 帮助
+- `K`: 打开帮助
+
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
 ```
 -Wno-invalid-source-encoding
 ```
-
-## 帮助
-- `K`: 打开帮助
-
 
 ## 其他
 - 51使用ctags生成tags文件辅助跳转，其他使用make的工具使用`make compiledb`更新数据库文件

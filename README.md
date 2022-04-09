@@ -78,27 +78,76 @@ pip install compiledb
 - 上传时（功能2）：如果更改的是管理员的.vimrc，则使用管理员权限运行，如果不使用管理员权限运行则上传普通用户.vimrc。（上传完成后用功能1更新另一个账户的配置文件）
 
 ## 一些自定义按键说明(<>内表示同时按，否则为顺序按)
-	详细映射查看配置文件
+
+### 移动
+- `<C-j>`：插入模式下移光标
+- `<C-k>`：插入模式上移光标
+- `<C-h>`：插入模式左移光标
+- `<C-l>`：插入模式右移光标
+
+### 功能
+- `<F2>`: 生成tags，辅助跳转
 - `<F3>`: 文件树
 - `<F4>`: Tagbar
 - `<Alt-+>`: 终端
 - `<leader>be`: buffer列表
-- `<leader>w/e`：窗口调整
+
+#### coc
+- `gd`: 跳转到定义
+- `gr`: 跳转到引用
+- `<leader>rn`: 符号重命名
+- `<leader>f`: 格式化选中的代码
+- `<leader>qf`: 对当前行使用自动修复
+- `<space>a`: 语法检查列表
+- `<space>o`: 查找当前文档符号
+- `<space>s`: 查找工作区符号
+- `<space>e`: 已安装coc扩展列表
+
+#### easymotion
+- `<leader><leader>w`:按单词向后跳转
+- `<leader><leader>b`:按单词向前跳转
+
+#### 翻译
+- `<leader>t`: 	在底行翻译
+- `<leader>tt`: 弹窗翻译
+
+### 窗口跳转和调整
+- `<C-]>`：使用tags文件跳转
 - `<leader>s/d`: 窗口跳转
+- `<leader>w/e`：窗口调整
+- `<leader>j`：窗口交换
+- `<C-f>`：窗口滚动
+- `<C-b>`：窗口滚动
+- `<C-d>`：窗口滚动
+- `<C-u>`：窗口滚动
+- `<C-y>`：窗口滚动
+- `<C-e>`：窗口滚动
+- `<tab>`：切换buffer标签,自动补全时切换选项，加`shift`反向切换
+
+### keil命令
 - `<leader>kb`：使用keil编译
+- `<leader>kr`: 使用keil重新编译
 - `<leader>kd`: 使用keil下载
+
+### 全屏插件
 - `<Alt-Enter>`: 全屏
 - `<Alt-y`>:全屏减小透明度
 - `<Alt-t`>:全屏增加透明度
+
+### 文件类命令
 - `<leader>hex`:打开二进制文件(不能用于关闭)
-- `<leader><leader>w`:按单词向后跳转
-- `<leader><leader>b`:按单词向前跳转
+
+	详细映射查看配置文件
 
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
 ```
 -Wno-invalid-source-encoding
 ```
+
+## 帮助
+- `K`: 打开帮助
+
 
 ## 其他
 - 51使用ctags生成tags文件辅助跳转，其他使用make的工具使用`make compiledb`更新数据库文件

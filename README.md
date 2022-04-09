@@ -110,6 +110,7 @@ pip install compiledb
 #### 翻译
 - `<leader>t`: 	在底行翻译
 - `<leader>tt`: 弹窗翻译
+- `<space><space>`: Ken翻译
 
 ### 窗口跳转和调整
 - `<C-]>`：使用tags文件跳转

@@ -196,6 +196,7 @@ Plug 'skywind3000/vim-terminal-help'
 "Plug 'iamcco/markdown-preview.vim'
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'instant-markdown/vim-instant-markdown'
+Plug 'IC-killer/vim-Ken'
 "翻译
 Plug 'voldikss/vim-translator'
 "中文帮助文档
@@ -212,6 +213,7 @@ nmap <silent> <Leader>t :Translate<cr>
 vmap <silent> <Leader>t :TranslateV<cr>
 nmap <silent> <Leader>tt <Plug>TranslateW
 vmap <silent> <Leader>tt <Plug>TranslateWV
+nnoremap <silent> <space><space> :Ken<cr>
 "markdown preview
 "Uncomment to override defaults:
 filetype plugin on 

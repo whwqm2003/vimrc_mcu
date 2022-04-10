@@ -106,6 +106,7 @@ pip install compiledb
 #### easymotion
 - `<leader><leader>w`:按单词向后跳转
 - `<leader><leader>b`:按单词向前跳转
+- `<leader><leader>s`:跳转到指定字符
 
 #### 翻译
 - `<leader>t`: 	在底行翻译

@@ -1,4 +1,4 @@
-"set pythonthreedll=python39.dll
+set pythonthreedll=python39.dll
 
 "关闭菜单，滚动条，工具栏
 set guioptions-=m
@@ -189,7 +189,7 @@ Plug 'luochen1990/rainbow'
 "快速注释
 Plug 'preservim/nerdcommenter'
 "调试
-"Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
+Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 "终端
 Plug 'skywind3000/vim-terminal-help'
 "markdown

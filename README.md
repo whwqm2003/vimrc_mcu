@@ -156,10 +156,30 @@ pip install compiledb
 ```
 sudo chown -R  username:username  filename
 ```
-- makefile中添加win平台库路径示例：
+- makefile里面win平台库路径示例：
 ```c
 -I D:/GreenSoft/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/arm-none-eabi/include
 ```
+
+- wsl下所有光标都一样，单独加入下面配置，可以凑合使用
+
+| 1        | 2      | 3            | 4        | 5          | 6      |
+| :----:   | :----: | :----:       | :----:   | :----:     | :----: |
+| 闪烁块 █ | 块 █   | 闪烁下划线 ▁ | 下划线 ▁ | 闪烁竖线 ┃ | 竖线 ┃ |
+
+```
+" 进入插入模式下的光标形状
+let &t_SI.="\e[5 q"
+" 进入替换模式下的光标形状
+let &t_SR.="\e[3 q"
+" 从插入模式或替换模式下退出，进入普通模式后的光标形状
+let &t_EI.="\e[1 q"
+" 进入vim时，设置普通模式下的光标形状
+autocmd VimEnter * silent !echo -ne "\e[1 q"
+" 离开vim后，恢复shell模式下的光标形状
+autocmd VimLeave * silent !echo -ne "\e[5 q"
+```
+
 ## 演示
 <img src="https://www.z4a.net/images/2022/03/19/Snipaste_2022-03-19_17-21-39.png" alt="Snipaste_2022-03-19_17-21-39.png" border="0" />
 

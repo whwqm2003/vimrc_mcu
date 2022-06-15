@@ -108,6 +108,12 @@ pip install compiledb
 - `<leader><leader>b`:按单词向前跳转
 - `<leader><leader>s`:跳转到指定字符
 
+#### 对齐: Tabular
+- 对齐指定字符：先选中要操作范围，选中后冒号
+```
+:Tabularize /{char}
+```
+
 #### 翻译
 - `<leader>t`: 	在底行翻译
 - `<leader>tt`: 弹窗翻译

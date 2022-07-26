@@ -113,7 +113,9 @@ pip install compiledb
 ```
 :Tabularize /{char}
 ```
-
+#### vim-floaterm
+- `<A-=>`: 打开/隐藏终端窗口
+- `<A-+>`: 关闭终端窗口，在窗口关闭前使用
 #### 翻译
 - `<leader>t`: 	在底行翻译
 - `<leader>tt`: 弹窗翻译

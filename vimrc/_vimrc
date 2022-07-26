@@ -100,7 +100,9 @@ set backspace=2 "indent,eol,start
 colorscheme onedark
 
 "设置字体，该字体需要下载安装
-set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+set guifont=BitstreamVeraSansMono\ Nerd\ Font:h10:cANSI
+"set guifont=VeraMono:h10:cANSI
 
 "自动重载配置文件，只对一部分配置有效，插件配置需要重新启动
 "autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -191,7 +193,8 @@ Plug 'preservim/nerdcommenter'
 "调试
 Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 "终端
-Plug 'skywind3000/vim-terminal-help'
+"Plug 'skywind3000/vim-terminal-help'
+Plug 'voldikss/vim-floaterm'
 "markdown
 "Plug 'iamcco/markdown-preview.vim'
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -211,9 +214,13 @@ call plug#end()
 "let g:translator_default_engines = 'bing'
 nmap <silent> <Leader>t :Translate<cr>
 vmap <silent> <Leader>t :TranslateV<cr>
-nmap <silent> <Leader>tt <Plug>TranslateW
-vmap <silent> <Leader>tt <Plug>TranslateWV
+nmap <silent> <Leader>tt <Plug>TranslateW<cr>
+vmap <silent> <Leader>tt <Plug>TranslateWV<cr>
 nnoremap <silent> <space><space> :Ken<cr>
+nnoremap <silent> <A-=> :FloatermToggle<cr>
+tnoremap <silent> <A-=> <C-\><C-n>:FloatermToggle<cr>
+nnoremap <silent> <A-+> :FloatermKill<cr>
+tnoremap <silent> <A-+> :FloatermKill<cr>
 "markdown preview
 "Uncomment to override defaults:
 filetype plugin on 
@@ -276,13 +283,13 @@ let g:DoxygenToolkit_licenseTag="My own license"
 "---------------------------------------------------------------------------------------------------
 "底行配置
 let g:airline_theme="molokai"
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline#extensions#tabline#formatter = 'default'
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'

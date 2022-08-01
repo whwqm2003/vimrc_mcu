@@ -12,6 +12,8 @@ inoremap <C-k> <ESC>ka
 inoremap <C-h> <ESC>ha
 inoremap <C-l> <ESC>la
 
+inoremap jk <ESC>
+
 
 " Vim's default behavior
 if &compatible
@@ -282,20 +284,20 @@ let g:DoxygenToolkit_licenseTag="My own license"
 
 "---------------------------------------------------------------------------------------------------
 "底行配置
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
 let g:airline_theme="molokai"
 let g:airline_powerline_fonts = 1
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#whitespace#symbol = '!'
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
+"let g:airline#extensions#whitespace#enabled = 0
+"let g:airline#extensions#whitespace#symbol = '!'
 
 "tab切换标签
 nmap <tab> :bn<cr>
@@ -515,9 +517,9 @@ nnoremap <leader>hex :Vinarise<CR>
 
 "保存工作区
 " manually save a session with <F5>
-"noremap <F5> :mksession! $VIM/manual_session.vim<cr>
+nnoremap <leader><F5> :mksession! $VIM/manual_session.vim<cr>
 " recall the manually saved session with <F6>
-"noremap <F6> :source $VIM/manual_session.vim<cr>
+nnoremap <leader><F6> :source $VIM/manual_session.vim<cr>
 
 "hi BufTabLineCurrent guifg=bg guibg=LightGreen
 "hi BufTabLineActive guifg=bg guibg=#E5C07B

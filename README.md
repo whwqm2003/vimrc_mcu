@@ -159,6 +159,18 @@ pip install compiledb
 ### 帮助
 - `K`: 打开帮助
 
+## Debug
+调试使用vimspector插件，需要`.vimspector.json` 配置文件
+- `<F5>`: 运行/继续
+- `<S-F5>`: 停止调试
+- `<C-S-F5>`: 复位调试
+- `<F6>`: 暂停
+- `<F9>`: 添加/取消断点
+- `<S-F9>`: 添加函数断点
+- `<F10>`: 单步跳过
+- `<F11>`: 单步进入
+- `<S-F11>`: 单步跳出
+
 ## keil编码配置
 - 屏蔽printf中文报错, option->c/c++(ac6)->Misc Controls，文本框填入：
 ```

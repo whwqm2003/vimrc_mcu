@@ -210,6 +210,8 @@ Plug 'yianwillis/vimcdoc'
 Plug 'Shougo/vinarise.vim'
 "easymotion
 Plug 'easymotion/vim-easymotion'
+"对齐
+Plug 'godlygeek/tabular'
 call plug#end()
 
 "翻译

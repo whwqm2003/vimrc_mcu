@@ -12,6 +12,12 @@ gvim9.0 x64
 - 使用平台：
 	- win10
 
+## 最新版vim获取
+执行下面命令，卸载重新安装即可
+```bash
+sudo add-apt-repository ppa:jonathonf/vim
+```
+
 ## 依赖
 - python3
 - nodejs >= 10.12

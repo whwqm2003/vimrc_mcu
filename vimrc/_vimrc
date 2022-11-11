@@ -1,6 +1,4 @@
 set pythonthreedll=python39.dll
-"let $PATH = "C:\Program Files\Git\usr\bin;" . $PATH
-"let $PATH = "C:\Program Files\Git\usr\bin;" . $PATH
 "关闭菜单，滚动条，工具栏
 set guioptions-=m
 set guioptions-=r
@@ -165,9 +163,18 @@ Plug 'godlygeek/tabular'
 "fuzzy
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+"start page
+Plug 'mhinz/vim-startify'
+"surround
+Plug 'tpope/vim-surround'
 "Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 call plug#end()
 
+" This path probably won't work
+let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
+set updatetime=100
 "翻译
 "let g:translator_default_engines = 'bing'
 nmap <silent> <Leader>t :Translate<cr>

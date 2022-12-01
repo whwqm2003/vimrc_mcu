@@ -1,4 +1,6 @@
 ##!/usr/bin/python3
+from __future__ import print_function
+import ctypes
 import shutil
 import os
 import sys
@@ -18,7 +20,11 @@ default_plugManagerGitee="./plugManager/plug.vim"
 default_ctags="./ctags/ctags.exe"
 default_fullscreen="./fullscreen/gvimfullscreen.dll"
 
-
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
 
 def loop_main(key1,platform):
     if(platform == "win32"):
@@ -108,10 +114,12 @@ def loop_main(key1,platform):
 
 vim_platform = sys.platform
 print("")
-print("-----------------------Ankee-------------------------")
+print("----------------------------------Ankee------------------------------------")
+print("请确认已经使用管理员运行, 否则将使用cmd管理权限二次执行, 而不再有任何提示")
+print("")
 print("vim配置脚本: 按下数字键选择功能. 适用于: win32")
 print("先手动安装font/VeraMono.ttf字体文件, 本机平台: "+vim_platform)
-print("需要自行下载的重要依赖：clangd/nodejs/python3")
+print("需要自行下载的重要依赖: clangd/nodejs/python3")
 print("手动添加clangd、fzf依赖的环境变量")
 print("")
 print("< 1 > 使用默认路径配置vim")
@@ -120,7 +128,14 @@ print("<其他> 退出")
 print("")
 
 key1 = input("请按键选择并回车...\n")
-loop_main(key1,vim_platform)
+
+if is_admin():
+    loop_main(key1,vim_platform)
+else:
+    if sys.version_info[0] == 3:
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
+    else:#in python2.x
+        ctypes.windll.shell32.ShellExecuteW(None, u"runas", unicode(sys.executable), unicode(__file__), None, 1)
 
 
 
